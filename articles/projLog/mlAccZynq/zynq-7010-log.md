@@ -50,3 +50,11 @@ sudo adduser $USER dialout
 **Solutions**: I followed the user guide which targets ZC702 board, not Zybo board. So, when I found the user guide targets Zybo, I found I choose the wrong board at the beginning of the project. I should choose **Zybo**, not **Zybo Z7-10**. After changing the board, "hello world" finally can be displayed in the SDK terminal. 
 [reference](https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-getting-started-with-zynq-server/start)
 
+## ***AXI CDMA(Central DMA)***
+
+### 05/09/2018
+
+- ***Implementation failed***
+
+**Details**: Z-7010 doesn't have enough **LUT** resources to map the FPGA design, in which modules related to CDMA take up many LUT resources. So, this sample project cannot be done in Z-7010.
+
