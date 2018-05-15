@@ -58,3 +58,5 @@ sudo adduser $USER dialout
 
 **Details**: Z-7010 doesn't have enough **LUT** resources to map the FPGA design, in which modules related to CDMA take up many LUT resources. So, this sample project cannot be done in Z-7010.
 
+**Solution**: After through investigation, I found that the module **AXI SmartConnect** actually take up most **LUT** sources, nearly 90%. To reduce the source taken up by **AXI SmartConnect**, I tried to reduce the **Write/Read Data Width** from 1024 to 512 in the module **AXI CDMA**. Surprisingly, the resouces of **AXI SmartConnect** is reduce by nearly 40 percent. 
+
